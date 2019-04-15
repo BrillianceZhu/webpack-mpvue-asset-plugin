@@ -29,7 +29,7 @@ const emitHandle = (compilation, callback) => {
               relativePath = getRelativePath(relativePath)
             }
 
-            if (/^(\.wxss)|(\.ttss)|(\.acss)|(\.css)$/.test(extname)) {
+            if (/^(\.wxss)|(\.ttss)|(\.acss)|(\.qss)|(\.css)$/.test(extname)) {
               relativePath = getRelativePath(relativePath)
               content = `@import "${relativePath}";\n${content}`
             } else if (!(/^\.map$/.test(extname))) {
